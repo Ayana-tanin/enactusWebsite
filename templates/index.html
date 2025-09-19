@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Enactus Кыргызстан — Сообщество студентов-предпринимателей</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+  <!-- Мобильное меню -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="mobile-menu-content">
+      <button class="mobile-menu-close" id="mobileMenuClose">&times;</button>
+      <nav class="mobile-nav">
+        <a href="#about" onclick="closeMobileMenu()">О нас</a>
+        <a href="#projects" onclick="closeMobileMenu()">Проекты</a>
+        <a href="#join" onclick="closeMobileMenu()">Присоединиться</a>
+        <a href="#contact" onclick="closeMobileMenu()">Контакты</a>
+      </nav>
+    </div>
+  </div>
+
+  <header>
+    <div class="logo">
+      <img src="/images/logo.png" alt="Enactus Logo">
+    </div>
+    <nav>
+      <a href="#about">Главная</a>
+      <a href="#projects">Проекты</a>
+      <a href="#join">Новости</a>
+      <a href="#contact">Контакты</a>
+    </nav>
+
+    <button class="mobile-menu-btn" id="mobileMenuBtn">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </header>
+
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1>Команда с безграничными возможностями!</h1>
+      <p>
+        Enactus — некоммерческая организация, которая объединяет молодежь от 16 – 35 лет, лидеров бизнеса и
+        университеты, идеей использования силы предпринимательства для изменения жизни людей и формирования лучшего,
+        более устойчивого мира.
+      </p>
+      <a href="#about" class="btn-secondary">Вступить</a>
+    </div>
+  </section>
+
+  <div class="container">
+    <main class="content-section">
+      <div class="hero-card">
+        <h2>Мы меняем жизнь через предпринимательство.</h2>
+        <p class="lead">Enactus — глобальная сеть студентов и лидеров, которые создают устойчивые проекты для локальных
+          сообществ. Мы учимся, создаём и масштабируем.</p>
+
+        <div class="actions">
+          <a class="btn btn-primary"
+            href="#https://docs.google.com/forms/d/e/1FAIpQLScqZXtD9wmYD7vTsvNDjANmRo-wlLFg_AiGSgrNN_9OdhVlaQ/viewform?fbclid=PAZXh0bgNhZW0CMTEAAacBg3gHgLNkMIffRSy2fm5Yjej3FeeGWldM5eD1uV4bddY0rBD5twryMxs_Lg_aem_88Ks9KBy1tAsZqS5sxy87w">Присоединиться</a>
+          <a class="btn btn-outline" href="#projects">Наши проекты</a>
+        </div>
+
+        <div class="cards">
+          <div class="small-card">
+            <h4>Миссия</h4>
+            <p>Совместное развитие</p>
+          </div>
+          <div class="small-card">
+            <h4>Команда</h4>
+            <p>Студенты из разных вузов Кыргызстана.</p>
+          </div>
+          <div class="small-card">
+            <h4>Результаты</h4>
+            <p>Проекты, которые дают реальные изменения.</p>
+          </div>
+          <div class="small-card">
+            <h4>Контакты</h4>
+          </div>
+        </div>
+      </div>
+
+      <aside class="side">
+        <!-- <div class="stat"><span>Участников</span><strong id="membersCount">120+</strong></div>
+        <div class="stat"><span>Проектов</span><strong id="projectsCount">18</strong></div>
+        <div class="stat"><span>Заявок</span><strong id="applicationsCount">0</strong></div> -->
+
+        <div class="join"><a href="https://www.instagram.com/enactus_ksla/"> </a>
+          <div class="chip">Ближайшее событие: 7 Октября 2025</div>
+          <p style="margin-top:12px;color:var(--muted);font-size:13px">Приходите на Enactus Day! Актуальное расписание —
+            в соцсетях</p>
+          </a>
+        </div>
+      </aside>
+    </main>
+
+    <section id="about">
+      <h2 style="color:var(--red-900); margin:30px 0 12px 0">О нас</h2>
+      <p style="color:var(--muted); margin:0">Enactus — международная платформа, где студенты разрабатывают
+        социально-предпринимательские проекты. Мы комбинируем бизнес-мышление и общественную пользу. <br> Рады
+        инициативе!</p>
+    </section>
+
+    <section id="projects">
+      <h2 style="color:var(--red-900); margin:30px 0 12px 0">Проекты</h2>
+      <div class="grid-3">
+        <article class="project">
+          <h3>Теплица для развития</h3>
+          <p>Выращивание растений</p>
+        </article>
+        <article class="project">
+          <h3>Решение безработицы</h3>
+          <p>Помощь при поиске работы </p>
+        </article>
+      </div>
+    </section>
+
+    <section id="join">
+      <h2 style="color:var(--red-900); margin:30px 0 12px 0">Как присоединиться</h2>
+      <p style="color:var(--muted); margin:0 0 12px 0">Напишите нам на почту или заполните форму — мы свяжемся и
+        пригласим на вводную встречу.</p>
+
+      <form id="applicationForm" class="application-form">
+        <div class="form-group">
+          <div class="input-wrapper">
+            <input type="text" id="applicantName" placeholder="ФИО" required maxlength="50">
+            <div class="char-counter" id="nameCounter">0/50</div>
+          </div>
+          <div class="input-wrapper">
+            <input type="tel" id="applicantPhone" placeholder="Номер телефона" required maxlength="20">
+            <div class="char-counter" id="phoneCounter">0/20</div>
+          </div>
+          <div class="input-wrapper">
+            <input type="email" id="applicantEmail" placeholder="Email" required maxlength="100">
+            <div class="char-counter" id="emailCounter">0/100</div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">
+          <span class="btn-text">Отправить</span>
+          <span class="btn-loading" style="display: none;">Отправляем...</span>
+        </button>
+      </form>
+
+      <div id="formMessage" class="form-message" style="display: none;"></div>
+    </section>
+
+    <section id="contact">
+      <h2 style="color:var(--red-900); margin:30px 0 12px 0">Контакты</h2>
+      <div class="contact-info">
+        <div class="contact-item">
+          <strong>Email:</strong> enactus@kg.com
+        </div>
+        <div class="contact-item">
+          <strong>Телефон:</strong> +996 XXX XXX XXX
+        </div>
+        <div class="contact-item">
+          <strong>Адрес:</strong> ул. Примерная 12, Бишкек
+        </div>
+      </div>
+    </section>
+
+    <footer class="main-footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>Меню</h3>
+          <ul>
+            <li><a href="#about">О нас</a></li>
+            <li><a href="#projects">Проекты</a></li>
+            <li><a href="#join">Команды</a></li>
+            <li><a href="#contact">Академические эдвайзеры</a></li>
+            <li><a href="#contact">Галерея</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Что мы делаем</h3>
+          <ul>
+            <li><a href="#projects">Направления работы</a></li>
+            <li><a href="#projects">Проекты офиса Enactus Kyrgyzstan</a></li>
+            <li><a href="#projects">Мировой кубок Enactus</a></li>
+            <li><a href="#projects">Национальные соревнования</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Контакты</h3>
+          <div class="contact-info-footer">
+            <p><strong>Email:</strong> enactuskyrgyzstan@gmail.com</p>
+            <p><strong>Телефон:</strong> +996 551 996 106</p>
+            <p><strong>Адрес:</strong> ул. Примерная 12, Бишкек</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copyright">
+          <p>&copy; 2025 Copyright, All Right Reserved</p>
+        </div>
+        <div class="footer-socials">
+          <a href="#" target="_blank" class="social-link facebook" title="Facebook">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+            </svg>
+          </a>
+          <a href="https://www.instagram.com/enactus_ksla/" target="_blank" class="social-link instagram"
+            title="Instagram">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
+          </a>
+          <a href="https://youtube.com/@enactusksla5651?si=V4uDBLTAXkXgwL3o" target="enactusKSLA ЮР "
+            class="social-link youtube" title="YouTube">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
