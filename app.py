@@ -23,6 +23,11 @@ def images(filename):
     """Статический маршрут для изображений"""
     return send_from_directory('images', filename)
 
+@app.route('/static/<filename>')
+def static_files(filename):
+    """Статический маршрут для CSS и JS файлов"""
+    return send_from_directory('static', filename)
+
 # Путь к файлу для хранения заявок
 APPLICATIONS_FILE = 'applications.json'
 
@@ -125,7 +130,7 @@ def save_application(name, phone, email):
 @app.route('/')
 def index():
     """Главная страница"""
-    return render_template('index.html')
+    return send_from_directory('.', 'index.html')
 
 @app.route('/api/apply', methods=['POST'])
 def apply():
